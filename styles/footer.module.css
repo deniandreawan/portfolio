@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  padding: 8vh 0px;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--text-color) !important;
+  text-decoration: none;
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+}

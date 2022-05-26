@@ -22,6 +22,14 @@ export const REPO_PINNED_QUERY = gql`
               name
               description
               url
+              forkCount
+              stargazerCount
+              languages(first: 1, orderBy: { direction: DESC, field: SIZE }) {
+                nodes {
+                  name
+                  color
+                }
+              }
             }
           }
         }
@@ -65,5 +73,15 @@ type TPinnedDetails = {
     name: string;
     description: string;
     url: string;
+    forkCount: number;
+    stargazerCount: number;
+    languages: {
+      nodes: ILanguange[];
+    };
   };
 };
+
+interface ILanguange {
+  name: string;
+  color: string;
+}
