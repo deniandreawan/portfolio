@@ -12,7 +12,6 @@
 
 .profileDetail {
   z-index: 10;
-  font-weight: bold;
 }
 
 .profileDetail div {
@@ -52,19 +51,18 @@
 
 .username {
   font-size: 18px;
-  font-weight: bold;
 }
 
 .username span {
   font-size: 24px;
   display: block;
+  font-weight: bold;
 }
 
 .about a,
 .username a {
   color: #fff !important;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .about a:hover,
@@ -109,5 +107,10 @@
 
   .bgFilter {
     background: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0));
+  }
+
+  .socials span {
+    margin-right: 3vw !important;
+    margin-left: 3vw !important;
   }
 }

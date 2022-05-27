@@ -12,7 +12,7 @@
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
 }
 
 .projects a {
@@ -66,5 +66,21 @@
 @media (max-width: 800px) {
   .projects {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects a {
+    padding: 2vh 5%;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .aboutSection {
+    font-size: 16px;
+  }
+
+  .bottomSection {
+    font-size: 12px;
   }
 }

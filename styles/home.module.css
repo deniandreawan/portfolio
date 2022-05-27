@@ -24,4 +24,8 @@
     display: inline-block;
     padding-left: 5vw;
   }
+
+  .display h1 {
+    font-size: 36px;
+  }
 }
