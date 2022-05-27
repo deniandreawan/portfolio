@@ -1,7 +1,7 @@
 import { FaCodeBranch, FaStar, FaCircle } from "react-icons/fa";
 
-import { IPinnedData } from "../graphql/queries/repo.gql";
-import styles from "../styles/work.module.css";
+import { IPinnedData } from "@graphql/queries/repo.gql";
+import styles from "@styles/work.module.css";
 
 interface IProps {
   data: IPinnedData;
