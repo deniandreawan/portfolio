@@ -1,6 +1,6 @@
-import type { NextPage } from "next";
+import type { NextPage, GetStaticProps } from "next";
 
-import client from "../graphql/client";
+import client from "@graphql/client";
 import {
   IPinnedData,
   IPinnedTotalCount,
@@ -8,18 +8,15 @@ import {
   IPinnedVars,
   REPO_PINNED_QUERY,
   REPO_PINNED_TOTAL_QUERY,
-} from "../graphql/queries/repo.gql";
+} from "@graphql/queries/repo.gql";
 import {
   IProfileData,
   IProfileVars,
   PROFILE_QUERY,
-} from "../graphql/queries/profile.gql";
-
-import Layout from "../components/Layout";
-import Profile from "../components/Profile";
-import Work from "../components/Work";
-import styles from "../styles/home.module.css";
-import Footer from "../components/Footer";
+} from "@graphql/queries/profile.gql";
+import { siteMetadata } from "@data/siteMetadata";
+import { Layout, Profile, Work, Footer } from "@components/index";
+import styles from "@styles/home.module.css";
 
 interface IProps {
   pinnedData: IPinnedData;
@@ -38,11 +35,11 @@ const Home: NextPage<IProps> = ({ pinnedData, profileData }) => {
   );
 };
 
-export async function getServerSideProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const { data: profileData } = await client.query<IProfileData, IProfileVars>({
     query: PROFILE_QUERY,
     variables: {
-      username: process.env.GITHUB_USERNAME,
+      username: siteMetadata.username,
     },
   });
 
@@ -52,14 +49,14 @@ export async function getServerSideProps() {
   >({
     query: REPO_PINNED_TOTAL_QUERY,
     variables: {
-      username: process.env.GITHUB_USERNAME,
+      username: siteMetadata.username,
     },
   });
 
   const { data: pinnedData } = await client.query<IPinnedData, IPinnedVars>({
     query: REPO_PINNED_QUERY,
     variables: {
-      username: process.env.GITHUB_USERNAME,
+      username: siteMetadata.username,
       totalCount: totalData && totalData.user.pinnedItems.totalCount,
     },
   });
@@ -69,7 +66,8 @@ export async function getServerSideProps() {
       pinnedData,
       profileData,
     },
+    revalidate: 1,
   };
-}
+};
 
 export default Home;

@@ -2,9 +2,9 @@ import Image from "next/image";
 import { HiLocationMarker, HiMail, HiLink } from "react-icons/hi";
 import { FaTwitter, FaDribbble, FaLinkedinIn, FaMediumM } from "react-icons/fa";
 
-import { IProfileData } from "../graphql/queries/profile.gql";
-import background from "../assets/bg.webp";
-import styles from "../styles/profile.module.css";
+import { IProfileData } from "@graphql/queries/profile.gql";
+import { siteMetadata } from "@data/siteMetadata";
+import styles from "@styles/profile.module.css";
 
 interface IProps {
   data: IProfileData;
@@ -44,22 +44,22 @@ const Profile = ({ data }: IProps) => {
 
           <div className={styles.socials}>
             <span>
-              <a href="https://www.twitter.com/deniandrwan">
+              <a href={siteMetadata.twitter} aria-label="twitterLink">
                 <FaTwitter size={16} />
               </a>
             </span>
             <span>
-              <a href="https://www.dribbble.com/deniandreawan">
+              <a href={siteMetadata.dribbble} aria-label="dribbbleLink">
                 <FaDribbble size={16} />
               </a>
             </span>
             <span>
-              <a href="https://www.linkedin.com/deniandreawan">
+              <a href={siteMetadata.linkedin} aria-label="linkedinLink">
                 <FaLinkedinIn size={16} />
               </a>
             </span>
             <span>
-              <a href="https://www.medium.com/deniandreawan">
+              <a href={siteMetadata.medium} aria-label="mediumLink">
                 <FaMediumM size={16} />
               </a>
             </span>
@@ -68,11 +68,13 @@ const Profile = ({ data }: IProps) => {
       </div>
 
       <Image
-        src={background}
+        src="/static/images/bg.webp"
         alt="background"
         layout="fill"
         objectFit="cover"
         priority
+        sizes="50vw"
+        quality={70}
       />
       <div className={styles.bgFilter} />
     </div>

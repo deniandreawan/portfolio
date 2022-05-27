@@ -14,6 +14,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@graphql/*": ["graphql/*"],
+      "@styles/*": ["styles/*"]
+    },
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

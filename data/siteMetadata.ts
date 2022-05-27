@@ -1,0 +1,17 @@
+export const siteMetadata = {
+  title: "Deni Andreawan",
+  headerTitle: "DeniAndreawan",
+  description: "My Portfolio",
+  language: "en-us",
+  siteUrl: "https://deniandreawan.vercel.app",
+  siteRepo: "https://github.com/deniandreawan/portfolio",
+  socialBanner: "/static/images/twitter-card.png",
+  username: "deniandreawan",
+  email: "deniandreawan0@gmail.com",
+  github: "https://github.com/deniandreawan",
+  twitter: "https://twitter.com/deniandrwan",
+  dribbble: "https://dribbble.com/deniandreawan",
+  medium: "https://medium.com/deniandreawan",
+  linkedin: "https://www.linkedin.com/deniandreawan",
+  locale: "en-US",
+};
