@@ -61,13 +61,19 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   });
 
-  return {
-    props: {
-      pinnedData,
-      profileData,
-    },
-    revalidate: 1,
-  };
+  if (!profileData && !totalData && !pinnedData) {
+    return {
+      notFound: true,
+    };
+  } else {
+    return {
+      props: {
+        pinnedData,
+        profileData,
+      },
+      revalidate: 1,
+    };
+  }
 };
 
 export default Home;

@@ -72,9 +72,9 @@ const Profile = ({ data }: IProps) => {
         alt="background"
         layout="fill"
         objectFit="cover"
-        priority
+        priority={true}
         sizes="50vw"
-        quality={70}
+        quality={65}
       />
       <div className={styles.bgFilter} />
     </div>
