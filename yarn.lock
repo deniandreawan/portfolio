@@ -1028,6 +1028,16 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/poppins@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.8.tgz#65ce9b32f31bda5a25c23001bcebf1c66e440320"
+  integrity sha512-HE9yLDxYJEcxooVrYvvEhtyxaYU32hQIx1+npKegVefceE0l0zi0ePqKWWxYxkFpyy6WuZSQ+9rai3INnYKEJA==
+
+"@fontsource/questrial@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/questrial/-/questrial-4.5.8.tgz#53a1749bb5733a8b5942483dd2348687bf80f749"
+  integrity sha512-UvNyGlmBRZhmf00EU7PBCj0Ql+XJ6YKgQg281hhr+oCb9Rx6eUhSdwE9NCV3ANXQXiUuxGBVTeiXgki+m7q6/A==
+
 "@graphql-typed-document-node/core@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.1.1.tgz#076d78ce99822258cf813ecc1e7fa460fa74d052"

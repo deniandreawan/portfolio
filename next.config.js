@@ -6,11 +6,11 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
-  font-src 'self' https://fonts.gstatic.com;
+  font-src 'self';
   frame-src
 `;
 
