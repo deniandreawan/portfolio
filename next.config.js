@@ -55,7 +55,7 @@ const securityHeaders = [
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    domains: ["avatars.githubusercontent.com", "gravatar.com"],
   },
   pageExtensions: ["js", "jsx", "ts", "tsx"],
   async headers() {
