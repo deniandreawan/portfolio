@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data: profileData } = await client.query<IProfileData, IProfileVars>({
     query: PROFILE_QUERY,
     variables: {
-      username: siteMetadata.username,
+      username: siteMetadata.usernameGithub,
     },
   });
 
@@ -49,14 +49,14 @@ export const getStaticProps: GetStaticProps = async () => {
   >({
     query: REPO_PINNED_TOTAL_QUERY,
     variables: {
-      username: siteMetadata.username,
+      username: siteMetadata.usernameGithub,
     },
   });
 
   const { data: pinnedData } = await client.query<IPinnedData, IPinnedVars>({
     query: REPO_PINNED_QUERY,
     variables: {
-      username: siteMetadata.username,
+      username: siteMetadata.usernameGithub,
       totalCount: totalData && totalData.user.pinnedItems.totalCount,
     },
   });

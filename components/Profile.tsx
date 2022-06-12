@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HiLocationMarker, HiMail, HiLink } from "react-icons/hi";
-import { FaTwitter, FaDribbble, FaLinkedinIn, FaMediumM } from "react-icons/fa";
+import { FaTwitter, FaDribbble, FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 import { IProfileData } from "@graphql/queries/profile.gql";
 import { siteMetadata } from "@data/siteMetadata";
@@ -16,7 +16,9 @@ const Profile = ({ data }: IProps) => {
       <div className={styles.profileDetail}>
         <div className={styles.avatar}>
           <Image
-            src={data.user.avatarUrl}
+            src={
+              "https://gravatar.com/userimage/98782001/2bcfb22c17aba24245956a403b7c9f97.jpg?size=500"
+            }
             alt="avatar"
             layout="fill"
             objectFit="cover"
@@ -59,8 +61,8 @@ const Profile = ({ data }: IProps) => {
               </a>
             </span>
             <span>
-              <a href={siteMetadata.medium} aria-label="mediumLink">
-                <FaMediumM size={16} />
+              <a href={siteMetadata.github} aria-label="githubLink">
+                <FaGithub size={16} />
               </a>
             </span>
           </div>
